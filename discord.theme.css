@@ -1,0 +1,270 @@
+/**
+ * @name Discord+
+ * @version 3.1.1
+ * @author PlusInsta
+ * @authorLink https://plusinsta.xyz
+ * @description A sleek, customizable Discord theme.
+ * @website https://plusinsta.xyz/discord-plus/
+ * @source https://github.com/PlusInsta/discord-plus/blob/master/DiscordPlus-source.theme.css
+ * @invite 2Jwh2nS
+*/
+@import url(//plusinsta.xyz/discord-plus/DiscordPlus-source.theme.css);
+
+/* I've commented most of these values so you can change them yourself.
+   If you're having trouble, or you want to do more than what these values
+   allow for, drop by our server and we can probably help you out! */
+
+/* Font import */
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto:400,700|Righteous);
+/* This link loads fonts. Go to fonts.google.com and have a look!
+If there's any fonts you like, click them, select styles that are
+the closest to 400 and 700. If you want more fonts, back out to the
+main page and add more. When you're done, click "View selected families"
+in the top right, click the Embed tab, and replace the entire line with
+the "CSS rules" it gives you. After that, just set the fonts below! */
+
+:root {
+/* Background image. Falls back to accent color if invalid.
+   To use an image on your computer, send it anywhere on Discord,
+   then right-click and Copy Link, then paste it between the ()'s'. */
+--dplus-background: url(https://wallpaperaccess.com/full/2741428.jpg);
+
+/* Accent color, used to decorate the UI with colors. */
+--dplus-accent-ui: rgba(119, 119, 119, 0.904);
+--dplus-accent-ui-hover: white;
+
+
+
+/* Fonts */
+--dplus-font-ui: 'Arial';
+--dplus-font-body: 'Arial';
+--dplus-font-header: 'Arial';
+
+/* Round corner sizes, measured in pixel radius
+   Set avatar/server to 50% for circles
+   UI radius must be in pixels */
+--dplus-radius-ui: 5px;
+--dplus-radius-avatar: 20%;
+--dplus-radius-server: 50%;
+
+/* This determines margins and padding */
+--dplus-spacing-ui: 10px;
+--dplus-spacing-app: 10px;
+
+/* The Home icon */
+--dplus-icon-home-dark: url(https://i.pinimg.com/564x/8e/ac/1c/8eac1cdf7831466393cd2f4baf96d1a9.jpg);
+--dplus-icon-home-light: url(//plusinsta.xyz/discord-plus/assets/discord/home_light.svg);
+
+/* Icon sizes */
+--dplus-icon-avatar-chat: 48px;
+--dplus-icon-avatar-list: 32px;
+--dplus-icon-avatar-profile: 80px;
+
+--dplus-icon-server-sidebar: 48px;
+--dplus-icon-server-list: 32px;
+
+
+/* Width of different elements */
+--dplus-channels-width: 240px;
+--dplus-members-width: 240px;
+--dplus-scrollbar-width: 10px;
+--dplus-server-listing-width: 600%;
+
+/* Blur percentage. Set to 0 to disable blur.
+   Performance may be affected by this option. */
+--dplus-blur-scale: 100;
+
+/* font size */
+  --font-size: 90%;
+
+/* Background covers | Explanations below	*/
+--dplus-dark-bgc-ui-base: hsla(0, 0%, 0%, 0.74);
+--dplus-dark-bgc-ui-base-hover: hsla(0, 0%, 0%, 0.82);
+--dplus-dark-bgc-ui-card: hsla(0, 0%, 7%, 0.75);
+--dplus-dark-bgc-ui-card-hover: hsla(0, 0%, 15%, 0.50);
+--dplus-dark-bgc-chatmsg: hsla(0, 0%, 0%, 0.74);
+--dplus-dark-bgc-chatmsg-hover: hsla(0, 0%, 0%, 0.82);
+--dplus-dark-bgc-popout: hsla(0, 0%, 0%, 0.75);
+--dplus-dark-bgc-button: hsla(0, 0%, 15%, 0.50);
+--dplus-dark-bgc-button-hover: hsla(0, 0%, 20%, 0.60);
+--dplus-dark-bgc-server-button: hsla(0, 0%, 15%, 0.50);
+--dplus-dark-bgc-server-button-hover: hsla(0, 0%, 20%, 0.60);
+
+
+
+--dplus-light-bgc-ui-base: hsla(0, 0%, 97%, 0.88);
+--dplus-light-bgc-ui-base-hover: hsla(0, 0%, 100%, 0.90);
+--dplus-light-bgc-ui-card: hsla(0, 0%, 93%, 0.75);
+--dplus-light-bgc-ui-card-hover: hsla(0, 0%, 50%, 0.25);
+--dplus-light-bgc-chatmsg: hsla(0, 0%, 97%, 0.88);
+--dplus-light-bgc-chatmsg-hover: hsla(0, 0%, 100%, 0.90);
+--dplus-light-bgc-popout: hsla(0, 0%, 100%, 0.80);
+--dplus-light-bgc-button: hsla(0, 0%, 50%, 0.80);
+--dplus-light-bgc-button-hover: hsla(0, 0%, 40%, 0.50);
+--dplus-light-bgc-server-button: hsla(0, 0%, 95%, 0.75);
+--dplus-light-bgc-server-button-hover: hsla(0, 0%, 100%, 1);
+}
+
+/* Explanations:
+* bgc is short for background cover / color
+* dark/light corresponds to the current active theme
+* ui-base is the main UI
+* ui-base-hover is used when hovering over clickable elements
+* ui-card is for cards like in server discovery
+* ui-card-hover is for hovering over cards
+* chatmsg governs messages in chat and the message box
+* chatmsg-hover is for hovering over a message
+* popout affects all popouts, like context menu, profiles, etc.
+* server-button affects server icons on the left side of the screen
+* server-button-hover affects servers icons when hovered over
+*/
+
+
+/* fancy pop outs lol */ 
+
+.menu-1QACrS, .emojiPicker-6YCk8a, .browser-mnQ1T7, .messagesPopoutWrap-3zryHW, .wrapper-1NB3WY, .container-3u7RcY, .container-2o3qEW, .container-2ebMPP, .userPopout-2j1gM4 {
+    animation: custom-menu-animation 250ms ease;
+    transform-origin: top;
+}
+@keyframes custom-menu-animation {
+    0% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+/* time showing thingee */
+.timestamp-p1Df1m:not(.timestampInline-_lS3aK, .timestampVisibleOnHover-9PEuZS) time::after {
+        content: " (" attr(aria-label) ")";
+        color: var(--text-muted);
+        font-size: 0.625rem;
+        font-weight: 400;
+        line-height: 1;
+        text-transform: lowercase;
+}
+
+.edited-1v5nT8:not(.message-translate-indicator) {
+    display: none;
+}
+
+/* fancy roles */
+.rolesList-3uZoaa {
+  gap: 8px;
+}
+.role-2TIOKu {
+  margin: 0;
+  height: auto;
+  padding: 6px 8px;
+  border-radius: 4px;
+  gap: 4px;
+  position: relative;
+  overflow: hidden;
+}
+.role-2TIOKu:hover .roleCircle-1EgnFN {
+  width: 100%;
+  opacity: 1;
+}
+.role-2TIOKu:hover .roleCircle-1EgnFN:not(:empty) ~ .roleName-2ZJJYR {
+  margin-left: 22px;
+}
+.roleCircle-1EgnFN {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100%;
+  border-radius: 0;
+  width: 85%;
+  -webkit-mask: linear-gradient(90deg, black, transparent);
+          mask: linear-gradient(90deg, black, transparent);
+  filter: none;
+  opacity: 0.3;
+  justify-content: flex-start;
+  padding: 8px;
+  box-sizing: border-box;
+  transition: 0.15s ease;
+}
+.roleName-2ZJJYR {
+  position: relative;
+  margin: 0;
+  transition: margin-left 0.15s ease;
+}
+.roleRemoveIcon-387wKV {
+  width: 16px;
+  height: 16px;
+}
+
+
+/* mention colors
+.wrapper-1ZcZW-,
+.mentioned-Tre-dv .mention {
+  color: #000000 !important;
+  background: rgba(0, 238, 255, 0.904) !important;
+  border-radius: 3px;
+  padding: 0 2px;
+  font-weight: 500;
+}
+
+.wrapper-1ZcZW-:hover,
+.mentioned-Tre-dv .mention:hover {
+  color: rgb(0, 0, 0) !important;
+  background-color: #ffffff !important;
+}
+
+*/
+
+.mentioned-Tre-dv .messageContent-2t3eCI:not(.repliedbodyContent-1R3vnK){
+    background-color: rgba(0, 247, 255, 0.904);
+    padding-left: 6px;
+    color: white;
+    padding-right: 6px;
+}
+
+/* bd settings at top */
+.bd-sidebar-header, 
+[aria-controls="settings-tab"], 
+[aria-controls="emotes-tab"], 
+[aria-controls="customcss-tab"], 
+[aria-controls="plugins-tab"],
+[aria-controls="themes-tab"], 
+[aria-controls="themes-tab"]      + .separator-2wx7h6, 
+[aria-controls="pluginrepo-tab"], 
+[aria-controls="pluginrepo-tab"] + .separator-2wx7h6, 
+[aria-controls="themerepo-tab"] + .separator-2wx7h6, 
+[aria-controls="themerepo-tab"]{
+  order: -1;
+}
+
+/* addon theme mini list */
+@import url(https://maendisease.github.io/BetterDiscordStuff/css/bdAddonMini.css);
+@import url(https://puckzxz.github.io/MoreServers/build/v2/ms.v2.css);
+
+/*Side-scrolling gradient*/
+@keyframes gradient-move {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/*[MENTION GRADIENT]*/
+/*Gives mentions a similar gradient to the name display gradients*/
+.mentioned-xhSam7 {
+  animation: gradient-move 10s linear infinite;
+  background: linear-gradient(to right, #af21883b 20%, #1717173b 35%, #1717173b 35%, #af218876 50%, #af218876 50%, #5d60ca3b 75%, #af21883b 90%);
+  background-size: 200% auto;
+}
+
+/*Sets the highlight tone to increase opacity on mouseover*/
+.mentioned-xhSam7:hover {
+  animation: gradient-move 10s linear infinite;
+  background: linear-gradient(to right, #af21885b 20%, #1717175b 35%, #1717175b 35%, #af218896 50%, #af218896 50%, #5d60ca5b 75%, #af21885b 90%);
+  background-size: 200% auto;
+}
+
+/* unread message notifications change*/
+@import url(https://puckzxz.github.io/MoreServers/build/v2/ms.v2.css);@import url(https://puckzxz.github.io/MoreServers/build/v2/ms.v2.css);
+:root {
+  --unread-server-animation: rainbow;
+}
