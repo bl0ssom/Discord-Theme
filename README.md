@@ -9,3 +9,6 @@ Read all notif
 Typing user avatar
 Xenolib
 Zeres plugin loibrary
+Server Folders
+Server Search
+Server Columns 
