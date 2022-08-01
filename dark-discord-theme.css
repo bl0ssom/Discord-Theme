@@ -1,4 +1,5 @@
 
+
 /**
     * @name GitHub Dark
     * @version 1.0.0
@@ -948,4 +949,77 @@ background: var(--background-secondary);
   left: 50px;
   width: 1px;
   height: 24px;
+}
+
+
+/* server rings */
+@import url("https://discordstyles.github.io/SoftX/ServerRings.css");
+
+/* Includes variables */
+:root {
+  --server-unread-colour: 255, 255, 255;
+  --server-hover-colour: 255, 255, 255;
+  --server-selected-colour: var(--accent, 0, 231, 169);
+  --server-spacing: 16px;
+  --server-glow-intensity: 1;
+}
+
+/* bounce at mention */
+
+:root {
+    --bounce-height: 20px;
+}
+
+.full-motion .listItem-3SmSlK.bd-guild.bd-badge .pill-2RsI5Q.bd-unread:not(.bd-selected) + div:not([class])  {
+    animation-name: unreadguildbounce; 
+    animation-delay: 1s; /* delay before begin bouncing */
+    animation-duration: 1.5s; /* duration of each bounce */
+    animation-iteration-count: 5; /* number of bounces */
+}
+
+@keyframes unreadguildbounce {
+   0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+   40% {transform: translateY(calc(var(--bounce-height) * -1));} 
+   60% {transform: translateY(calc(var(--bounce-height) * -.5));} 
+}
+
+/* glow rings around servers */
+
+@import url("https://discordstyles.github.io/SoftX/ServerRings.css");
+
+/* Includes variables */
+:root {
+  --server-unread-colour: 255, 255, 255;
+  --server-hover-colour: 255, 255, 255;
+  --server-selected-colour: var(--accent, 0, 231, 169);
+  --server-spacing: 16px;
+  --server-glow-intensity: 1;
+}
+
+/* roles background */
+.role-2TIOKu {
+    transform: translate(0);
+    overflow: hidden;
+
+    --transparency: .4;
+    border-radius: 5px;
+}
+.role-2TIOKu .roleRemoveIcon-387wKV {
+    margin: 0;
+    left: unset;
+    transform: translate(50%,-50%);
+}
+.role-2TIOKu .roleRemoveButton-17oXnT {
+    position: static;
+}
+.role-2TIOKu .roleCircle-3K9O3d:before {
+    content: '';
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: inherit;
+    opacity: var(--transparency);
 }
